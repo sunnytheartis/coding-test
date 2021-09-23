@@ -31,7 +31,19 @@ var questionEl = [
 ];
 
 function askQuestions(){
-    
+   li1.innerHTML = questionEl[index].firstChoice;
+   li2.innerHTML = questionEl[index].secChoice;
+   li3.innerHTML = questionEl[index].thirdChoice;
+   li4.innerHTML = questionEl[index].fourthChoice;
+}
+function askNextQuestion(){
+    if (index<5){
+        index++;
+        askQuestions();
+    }
+}
+function timerSet(){
+
 }
 //testButton.addEventListener("click", buttonClick)
 testButton.addEventListener('click', buttonClick)
