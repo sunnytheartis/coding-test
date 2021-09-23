@@ -43,7 +43,14 @@ function askNextQuestion(){
     }
 }
 function timerSet(){
-
+    var sec = 100;
+    var timer = setInterval(function(){
+        document.getElementById('timerText').innerHTML='00:'+sec;
+        sec--;
+        if (sec < 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
 }
 //testButton.addEventListener("click", buttonClick)
 testButton.addEventListener('click', buttonClick)
