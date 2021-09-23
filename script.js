@@ -1,13 +1,13 @@
 var testButton = document.getElementById("#testButton");
 var questionEl = [
-    {quest:"What are the questions",
+    {quest:"Commonly used data types do not include ____",
     firstChoice:"1:"+"Do",
     secChoice:"2:"+"not",
     thirdChoice:"3:"+"know",
     fourthChoice:"4:"+"that",
     correctAnswer:"4"
     },
-    {quest:"What are  questions",
+    {quest:"Arrays in JavaScript can be used to store:-",
     firstChoice:"1:"+"Do",
     secChoice:"2:"+"not",
     thirdChoice:"3:"+"know",
@@ -44,16 +44,26 @@ function askNextQuestion(){
 }
 function timerSet(){
     var sec = 100;
+    
     var timer = setInterval(function(){
-        document.getElementById('timerText').innerHTML='00:'+sec;
+        document.querySelector('.timerText').innerHTML='00:'+sec;
         sec--;
         if (sec < 0) {
             clearInterval(timer);
         }
     }, 1000);
 }
+timerSet();
+function hidingEl(){
+    var x = document.getElementById("highScore");
+    if(buttonClick===true){
+        x.style.display = "none";
+    }else{
+
+    }
+}
 //testButton.addEventListener("click", buttonClick)
-testButton.addEventListener('click', buttonClick)
+
 function buttonClick(){
 
     console.log("Button has been clicked")
